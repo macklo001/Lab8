@@ -12,15 +12,17 @@ public class Main {
 
         Author lovecraft = new Author("Howard", "Lovecraft", MALE);
         Author saramago = new Author("Jose", "Saramago", MALE);
+        Author zahn = new Author("Timothy", "Zahn", MALE);
 
-        Book cthulhu = new Book("Cthulhu", 120, 1820, Arrays.asList(lovecraft), Genre.HORROR);
-        Book cthulhu2 = new Book("Cthulhu2", 121, 2820, Arrays.asList(lovecraft), Genre.FANTASY);
-
+        Book cthulhu = new Book("Cthulhu", 79, 1928, Arrays.asList(lovecraft), Genre.HORROR);
+        Book ewangelia = new Book("Ewangelia Według Jezusa Chrystusa", 35, 2011, Arrays.asList(saramago), Genre.FANTASY);
+        Book starwars = new Book("Dziedzic Imperium", 49, 1994, Arrays.asList(zahn), Genre.FANTASY);
 
         BookService bookService = new BookService();
 
         bookService.add(cthulhu);
-        bookService.add(cthulhu2);
+        bookService.add(ewangelia);
+        bookService.add(starwars);
 
         System.out.println("ALL");
         System.out.println(bookService.getBooks());
@@ -38,7 +40,7 @@ public class Main {
         System.out.println(bookService.getMostExpensiveBook());
 
         System.out.println("REMOVING");
-        bookService.remove(cthulhu2);
+        bookService.remove(ewangelia);
         System.out.println(bookService.getBooks());
     }
 }
