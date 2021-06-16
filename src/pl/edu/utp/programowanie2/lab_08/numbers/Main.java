@@ -43,6 +43,5 @@ public class Main {
         }
         System.out.println(repeated);
 
-	// write your code here
     }
 }

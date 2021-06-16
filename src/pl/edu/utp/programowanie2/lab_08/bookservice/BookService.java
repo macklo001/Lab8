@@ -1,11 +1,4 @@
 package pl.edu.utp.programowanie2.lab_08.bookservice;
-//        •  dodawanie książek do listy
-//        •  usuwanie książek z listy
-//        •  zwracanie listy wszystkich książek
-//        •  zwracanie książek typu Fantasy
-//        •  zwracanie książek wydanych przed rokiem 1999
-//        •  zwracanie najdroższej książki
-//        •  zwracanie najtańszej książki
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +25,7 @@ public class BookService {
     public List<Book> getFantasyBooks() {
         List<Book> fantasyBooks = new ArrayList<>();
         for(Book book: books) {
-            if (book.getGenre().equals(Book.Genre.FANTASY)) {
+            if (book.getGenre().equals(Book.Genre.ADVENTURE)) {
                 fantasyBooks.add(book);
             }
         }

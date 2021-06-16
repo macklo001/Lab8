@@ -19,7 +19,7 @@ public class Book {
     }
 
     public enum Genre {
-        HORROR, FANTASY, COMEDY
+        ADVENTURE, BIOGRAPHY, FANTASY
     }
 
     public String getTitle() {

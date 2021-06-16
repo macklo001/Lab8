@@ -10,19 +10,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Author lovecraft = new Author("Howard", "Lovecraft", MALE);
-        Author saramago = new Author("Jose", "Saramago", MALE);
-        Author zahn = new Author("Timothy", "Zahn", MALE);
+        Author biografical = new Author("Jessica", "Sting", FEMALE);
+        Author saramago = new Author("Evan", "Luigi", MALE);
+        Author zahn = new Author("Jerzy", "Stojak", MALE);
 
-        Book cthulhu = new Book("Cthulhu", 79, 1928, Arrays.asList(lovecraft), Genre.HORROR);
-        Book ewangelia = new Book("Ewangelia Według Jezusa Chrystusa", 35, 2011, Arrays.asList(saramago), Genre.FANTASY);
-        Book starwars = new Book("Dziedzic Imperium", 49, 1994, Arrays.asList(zahn), Genre.FANTASY);
+        Book biograficzna = new Book("Moje mgliste dni", 59, 1988, Arrays.asList(biografical), Genre.BIOGRAPHY);
+        Book przygodowa = new Book("Przygody Toma", 75, 2020, Arrays.asList(saramago), Genre.ADVENTURE);
+        Book fantastyka = new Book("Lot na Marsa", 149, 1984, Arrays.asList(zahn), Genre.FANTASY);
 
         BookService bookService = new BookService();
 
-        bookService.add(cthulhu);
-        bookService.add(ewangelia);
-        bookService.add(starwars);
+        bookService.add(biograficzna);
+        bookService.add(przygodowa);
+        bookService.add(fantastyka);
 
         System.out.println("ALL");
         System.out.println(bookService.getBooks());
@@ -40,7 +40,7 @@ public class Main {
         System.out.println(bookService.getMostExpensiveBook());
 
         System.out.println("REMOVING");
-        bookService.remove(ewangelia);
+        bookService.remove(przygodowa);
         System.out.println(bookService.getBooks());
     }
 }
